@@ -7,10 +7,11 @@ public class Main {
     public static final ArrayList<String> list = new ArrayList<>();
 
     public static void main(String[] args) {
-        Cliente cliente = new Cliente();
+
         Camarero camarero = new Camarero();
+        Cliente cliente = new Cliente(camarero);
         // Es importante que empiece el camarero ya que se queda esperando.
-        camarero.start();
+
         cliente.start();
     }
 
